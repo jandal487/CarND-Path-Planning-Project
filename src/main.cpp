@@ -203,7 +203,7 @@ int main() {
 	map_waypoints_dy.push_back(d_y);
 	}
 
-	road.add_ego2(1,0,6,0,0,0,1,ego_config);
+	road.add_ego(1,0,6,0,0,0,1,ego_config);
 	
 	h.onMessage([&map_waypoints_x,&map_waypoints_y,&map_waypoints_s,
 			   &map_waypoints_dx,&map_waypoints_dy]
