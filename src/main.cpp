@@ -6,7 +6,11 @@
 #include "Eigen-3.3/Eigen/Core"
 #include "Eigen-3.3/Eigen/QR"
 #include "helpers.h"
+#include <algorithm>
 #include "json.hpp"
+#include "spline.h"
+#include "road.h"
+#include "vehicle.h"
 
 // for convenience
 using nlohmann::json;
