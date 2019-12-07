@@ -15,7 +15,7 @@ using Eigen::VectorXd;
 
 
 // Initializes Road object
-Road::Road(float speed_limit, vector<float> lane_speeds,int lane_width, float time_horizon,float mph_convert) {
+Road::Road(float speed_limit, vector<float> lane_speeds, int lane_width, float time_horizon, float mph_convert) {
 
     this->num_lanes = lane_speeds.size();
     this->lane_speeds = lane_speeds;
@@ -55,7 +55,7 @@ void Road::populate_traffic(vector<vector<double>> sf_data, vector<double> car_d
 	}
 	vector<float> ego_conf = {this->speed_limit*this->mph_convert, this->num_lanes, mycar.goal_s, mycar.max_acceleration};
 	int lane_num = car_data[3]/this->lane_width;
-	this->add_ego2(lane_num,car_data[2], car_data[3], car_data[4], car_data[5], car_data[6], car_data[7], ego_conf);
+	this->add_ego(lane_num,car_data[2], car_data[3], car_data[4], car_data[5], car_data[6], car_data[7], ego_conf);
 }
 
 void Road::advance() {
